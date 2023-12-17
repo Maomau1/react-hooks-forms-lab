@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-//import {v4 as uuid} from "uuid" 
 import ItemForm from "./ItemForm";
 import Filter from "./Filter";
 import Item from "./Item";
@@ -16,8 +15,7 @@ function ShoppingList({ items, setItems, onItemFormSubmit }) {
     //console.log(event.target.value)
     setSelectedName(event.target.value)
   }
-  
-  
+    
    const itemsToDisplay= items.filter((item) => {
     if (selectedCategory === "All") return true;
 
@@ -25,18 +23,6 @@ function ShoppingList({ items, setItems, onItemFormSubmit }) {
   })
   .filter((item) => item.name.includes(selectedName))
 
-  
-
-  /*function onFormCategoryChange(event){
-    setItemCategory(event.target.value)
-    console.log(event.target.value)
-  }
-
-  function onNameChange(event){
-    console.log(event.target.value)
-    setNewName(event.target.value)
-  }
-*/
   return (
     <div className="ShoppingList">
       <ItemForm onItemFormSubmit={onItemFormSubmit}/>

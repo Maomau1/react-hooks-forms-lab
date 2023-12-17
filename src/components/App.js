@@ -12,7 +12,7 @@ function App() {
   }
 
   function onItemFormSubmit(newItem) {
-    console.log(newItem)
+   //console.log(newItem)
   setItems([...items, newItem])
   }
 
